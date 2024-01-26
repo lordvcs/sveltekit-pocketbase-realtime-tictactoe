@@ -16,7 +16,8 @@ export const load = () => {
  */
 export const actions = {
   default: async ({ locals, request }) => {
-    const { gameID } = Object.fromEntries((await request.formData()) as any);
+    const formData = await request.formData();
+    const { gameID } = Object.fromEntries(formData);
     if (!gameID) {
       return fail(422, {
         gameID,

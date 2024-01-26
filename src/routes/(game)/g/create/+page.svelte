@@ -9,7 +9,7 @@
   <input
     type="text"
     placeholder="Game ID"
-    name="game-id"
+    name="gameID"
     value={form?.gameID ?? ""}
   />
   <button type="submit">Create</button>
